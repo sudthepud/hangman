@@ -63,6 +63,7 @@ public class Game {
     System.out.println ("Welcome to hangman, where you will try to guess a random words, and will lose points for each wrong letter guessed. Score is based on length of word, and number of wrong guesses");
     System.out.println(" ");
     String username = Utils.inputStr ("what is your name: ");
+    System.out.println("");
     username = username.toLowerCase();
     while (score > 0) {
       String x = Utils.inputStr ("please guess a letter: ");
@@ -90,6 +91,7 @@ public class Game {
         System.out.println("Your Score: " + score);
         scorehold = score;
         String confirmation = Utils.inputStr ("would you like to record your score? (type y or n): ");
+        System.out.println("");
         if (confirmation.equals("y")) {
           users.put(username, score);
           System.out.println("");
@@ -120,10 +122,13 @@ public void getScores () {
   System.out.println(users.get(o));
 }
 public void endGame () {
-  System.out.println("Leaderboard: " + users);
+  System.out.println("scores: " + users);
   UsersState state = new UsersState();
   state.users = users;
   state.save();
+}
+public void seeLeaderboard () {
+  System.out.println("scores: " + users);
 }
 public void clearAnswer () {
   rightAnswer = "";

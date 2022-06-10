@@ -1,1 +1,8 @@
-Searialization is used for the leaderboard and it makes use of the hashmap "users" I had implemented before in phase 1
+Author: Sudheesh Dabbara
+Game: Hangman
+
+Description of Purpose: Users guess letters one at a time, asteriks indicate the letter has not been guessed, a list of wrong guesses is generated as the game goes on, the remaining wrong guesses is calculated by dividing the score by 100, and the score is calculated by the length of the word
+
+Serialization: Serialization is used for the scores and it makes use of the hashmap "users" I had implemented before in phase 1. Essentially, a user can choose to record their score, and if they choose to do so, the scoreboard will add their name and their score.
+
+How to Make Sure Serialization Works: After playing a game, and saying yes to recording your score, if you quit the game (option 3) and then play again, and choose option 2 to view high scores, if your name and score shows up, then you know the searialization is working!

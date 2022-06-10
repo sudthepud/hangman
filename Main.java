@@ -10,13 +10,13 @@ class Main {
   int go = 1;
   while (go > 0) {
     System.out.println("");
-    int start = Utils.inputNum("Would you like to play(1), view your high score(2), or quit(3): ");
+    int start = Utils.inputNum("Would you like to play(1), view high scores(2), or quit(3): ");
     if (start == 1) {
       g.clearAnswer();
       g.play();
     }
     if (start == 2) {
-      g.getScores();
+      g.seeLeaderboard();
       }
     if (start == 3) {
       System.out.println("Thank you for playing hangman!");
